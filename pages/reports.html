@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CyberGuard | Security Reports</title>
+
+    <link
+        rel="stylesheet"
+        href="../style.css"
+    >
+
+</head>
+
+
+<body>
+
+<div id="app">
+
+
+    <!-- Navigation -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <span class="logo-icon">◈</span>
+
+            <span>
+                Cyber<span>Guard</span>
+            </span>
+
+        </div>
+
+
+        <nav>
+
+            <a href="../index.html">
+                Dashboard
+            </a>
+
+            <a href="password.html">
+                Security Tools
+            </a>
+
+            <a href="threats.html">
+                Threat Center
+            </a>
+
+            <a href="reports.html"
+               class="active">
+                Reports
+            </a>
+<a href="learning.html">
+    Learning
+</a>
+        </nav>
+
+
+        <div class="system-status">
+
+            <span class="status-dot"></span>
+
+            System Secure
+
+        </div>
+
+    </header>
+
+
+
+    <!-- Reports -->
+
+    <main>
+
+        <section class="reports-page">
+
+
+            <div class="reports-heading">
+
+                <p class="eyebrow">
+                    SECURITY CENTER / REPORTS
+                </p>
+
+<div class="report-actions">
+
+    <button
+        type="button"
+        class="report-print-button"
+        onclick="window.print()"
+    >
+        🖨 Print / Save Report
+    </button>
+
+</div>
+                <h1>
+                    Security
+                    <span>Reports.</span>
+                </h1>
+
+
+                <p>
+                    Review your CyberGuard security
+                    posture, threats, and recent activity
+                    in one place.
+                </p>
+
+            </div>
+
+
+
+            <!-- Report Overview -->
+
+            <div class="report-overview">
+
+
+                <article class="report-card">
+
+                    <span>
+                        SECURITY SCORE
+                    </span>
+
+                    <strong id="reportScore">
+                        --
+                    </strong>
+
+                    <small>
+                        /100
+                    </small>
+
+                </article>
+
+
+
+                <article class="report-card">
+
+                    <span>
+                        ACTIVE THREATS
+                    </span>
+
+                    <strong id="reportThreats">
+                        0
+                    </strong>
+
+                </article>
+
+
+
+                <article class="report-card">
+
+                    <span>
+                        RESOLVED
+                    </span>
+
+                    <strong id="reportResolved">
+                        0
+                    </strong>
+
+                </article>
+
+
+
+                <article class="report-card">
+
+                    <span>
+                        STATUS
+                    </span>
+
+                    <strong id="reportStatus">
+                        Secure
+                    </strong>
+
+                </article>
+
+            </div>
+
+<section class="security-timeline">
+
+    <div class="timeline-heading">
+        <p class="eyebrow">CYBERGUARD / SECURITY ACTIVITY</p>
+
+        <h2>Security Activity Timeline</h2>
+
+        <p>
+            A chronological view of important security events.
+        </p>
+    </div>
+
+    <div id="securityTimeline" class="timeline-list">
+        <div class="timeline-empty">
+            No security activity recorded yet.
+        </div>
+    </div>
+
+</section>
+
+            <!-- Threat Breakdown -->
+
+            <section class="report-section">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            THREAT BREAKDOWN
+                        </p>
+
+                        <h2>
+                            Security risk distribution
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="report-breakdown">
+
+
+                    <div class="breakdown-item">
+
+                        <span>
+                            High Risk
+                        </span>
+
+                        <strong id="reportHigh">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="breakdown-item">
+
+                        <span>
+                            Medium Risk
+                        </span>
+
+                        <strong id="reportMedium">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="breakdown-item">
+
+                        <span>
+                            Low Risk
+                        </span>
+
+                        <strong id="reportLow">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- Scan History -->
+
+            <section class="report-section">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            SCAN ACTIVITY
+                        </p>
+
+                        <h2>
+                            Recent security scans
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="reportScanHistory"
+                    class="report-scan-history"
+                >
+
+                    <div class="report-empty">
+                        No security scans recorded yet.
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- Report Status -->
+
+            <section class="report-status-panel">
+
+                <div>
+
+                    <span class="eyebrow">
+                        SECURITY ASSESSMENT
+                    </span>
+
+                    <h2 id="reportMessage">
+                        Your security posture is being monitored.
+                    </h2>
+
+                </div>
+
+
+                <div class="report-status-icon">
+                    ✓
+                </div>
+
+            </section>
+
+
+        </section>
+
+    </main>
+
+
+
+    <footer>
+
+        <span>
+            CYBERGUARD
+        </span>
+
+        <span>
+            Security Reports
+        </span>
+
+    </footer>
+
+
+</div>
+
+
+<script src="../app.js"></script>
+
+</body>
+
+</html>

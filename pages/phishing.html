@@ -1,0 +1,408 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CyberGuard | Phishing Detector</title>
+
+    <link
+        rel="stylesheet"
+        href="../style.css"
+    >
+
+</head>
+
+
+<body>
+
+<div id="app">
+
+
+    <!-- ==================================================
+         NAVIGATION
+         ================================================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <span class="logo-icon">◈</span>
+
+            <span>
+                Cyber<span>Guard</span>
+            </span>
+
+        </div>
+
+
+        <nav>
+    <a href="../index.html">Dashboard</a>
+    <a href="password.html" class="active">Security Tools</a>
+    <a href="threats.html">Threat Center</a>
+    <a href="learning.html">
+    Learning
+</a>
+</nav>
+
+
+        <div class="system-status">
+
+            <span class="status-dot"></span>
+
+            System Secure
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ==================================================
+         PHISHING DETECTOR
+         ================================================== -->
+
+    <main>
+
+        <section class="phishing-page">
+
+
+            <div class="phishing-heading">
+
+                <p class="eyebrow">
+                    SECURITY TOOL / PHISHING DETECTOR
+                </p>
+
+
+                <h1>
+
+                    Detect threats
+                    <span>before they reach you.</span>
+
+                </h1>
+
+
+                <p>
+
+                    Analyze suspicious URLs for common
+                    phishing indicators and potentially
+                    dangerous patterns.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="phishing-layout">
+
+
+                <!-- ======================================
+                     URL INPUT
+                     ====================================== -->
+
+                <div class="phishing-panel">
+
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="panel-label">
+                                URL ANALYSIS
+                            </span>
+
+
+                            <h2>
+                                Inspect a URL
+                            </h2>
+
+                        </div>
+
+
+                        <span class="lock-icon">
+                            🛡️
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="url-input-container">
+
+                        <input
+                            type="text"
+                            id="urlInput"
+                            placeholder="https://example.com"
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+
+
+                    <button
+                        class="analyze-button"
+                        id="analyzeURL"
+                        type="button"
+                    >
+
+                        Analyze URL
+
+                    </button>
+
+
+
+                    <div class="privacy-note">
+
+                        <span>●</span>
+
+                        <p>
+
+                            Analysis is performed locally
+                            in your browser. The URL is not
+                            uploaded by this tool.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ======================================
+                     RESULT PANEL
+                     ====================================== -->
+
+                <div class="phishing-result">
+
+
+                    <div class="result-header">
+
+                        <span>
+                            THREAT ANALYSIS
+                        </span>
+
+
+                        <span id="urlRiskLevel">
+                            Waiting
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="risk-score">
+
+
+                        <div class="risk-number">
+
+                            <span id="urlRiskScore">
+                                --
+                            </span>
+
+                            <small>
+                                /100
+                            </small>
+
+                        </div>
+
+
+                        <div
+                            class="risk-label"
+                            id="urlRiskLabel"
+                        >
+
+                            Enter a URL
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="strength-bar">
+
+                        <div
+                            id="urlRiskProgress"
+                        ></div>
+
+                    </div>
+
+
+
+                    <!-- ==================================
+                         SECURITY INDICATORS
+                         ================================== -->
+
+                    <div class="url-checks">
+
+
+                        <div class="check-item">
+
+                            <span id="httpsCheck">
+                                ○
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    HTTPS
+                                </strong>
+
+                                <small>
+                                    Secure connection
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="check-item">
+
+                            <span id="domainCheck">
+                                ○
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Domain
+                                </strong>
+
+                                <small>
+                                    Domain structure
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="check-item">
+
+                            <span id="keywordCheck">
+                                ○
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Keywords
+                                </strong>
+
+                                <small>
+                                    Suspicious terms
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="check-item">
+
+                            <span id="subdomainCheck">
+                                ○
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Subdomains
+                                </strong>
+
+                                <small>
+                                    URL complexity
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- ==================================
+                         THREAT DETAILS
+                         ================================== -->
+
+                    <div class="threat-details">
+
+
+                        <div class="insight-header">
+
+                            <span>
+                                THREAT INTELLIGENCE
+                            </span>
+
+                        </div>
+
+
+                        <div class="threat-message">
+
+                            <strong>
+                                Analysis Result
+                            </strong>
+
+
+                            <small id="urlAdvice">
+
+                                Enter a URL to begin
+                                analysis.
+
+                            </small>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <footer>
+
+        <span>
+            CYBERGUARD
+        </span>
+
+        <span>
+            Phishing Detector
+        </span>
+
+    </footer>
+
+
+</div>
+
+
+<script src="../app.js"></script>
+
+</body>
+
+</html>
+```

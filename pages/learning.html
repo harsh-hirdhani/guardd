@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CyberGuard | Learning Center</title>
+
+    <link
+        rel="stylesheet"
+        href="../style.css"
+    >
+
+</head>
+
+
+<body>
+
+<div id="app">
+
+
+    <!-- NAVIGATION -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <span class="logo-icon">◈</span>
+
+            <span>
+                Cyber<span>Guard</span>
+            </span>
+
+        </div>
+
+
+        <nav>
+
+            <a href="../index.html">
+                Dashboard
+            </a>
+
+            <a href="password.html">
+                Security Tools
+            </a>
+
+            <a href="threats.html">
+                Threat Center
+            </a>
+
+            <a href="reports.html">
+                Reports
+            </a>
+
+            <a
+                href="learning.html"
+                class="active"
+            >
+                Learning
+            </a>
+
+        </nav>
+
+
+        <div class="system-status">
+
+            <span class="status-dot"></span>
+
+            System Secure
+
+        </div>
+
+    </header>
+
+
+
+    <!-- LEARNING CENTER -->
+
+    <main>
+
+        <section class="learning-page">
+
+
+            <div class="learning-heading">
+
+                <p class="eyebrow">
+                    CYBERGUARD / SECURITY EDUCATION
+                </p>
+
+
+                <h1>
+
+                    Learn to stay
+                    <span>secure.</span>
+
+                </h1>
+
+
+                <p>
+
+                    Understand common cyber threats
+                    and learn simple ways to protect
+                    your digital identity.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- LEARNING CARDS -->
+
+            <div class="learning-grid">
+
+
+                <article class="learning-card">
+
+                    <div class="learning-icon">
+                        🎣
+                    </div>
+
+                    <span class="learning-tag">
+                        PHISHING
+                    </span>
+
+                    <h2>
+                        Spot phishing attacks
+                    </h2>
+
+                    <p>
+                        Learn how attackers use fake
+                        websites, emails and messages
+                        to steal information.
+                    </p>
+
+                </article>
+
+
+
+                <article class="learning-card">
+
+                    <div class="learning-icon">
+                        🔐
+                    </div>
+
+                    <span class="learning-tag">
+                        PASSWORDS
+                    </span>
+
+                    <h2>
+                        Build stronger passwords
+                    </h2>
+
+                    <p>
+                        Understand what makes a password
+                        difficult to guess and why
+                        password reuse is dangerous.
+                    </p>
+
+                </article>
+
+
+
+                <article class="learning-card">
+
+                    <div class="learning-icon">
+                        🌐
+                    </div>
+
+                    <span class="learning-tag">
+                        BROWSING
+                    </span>
+
+                    <h2>
+                        Browse safely
+                    </h2>
+
+                    <p>
+                        Learn how to identify suspicious
+                        websites, unsafe links and risky
+                        online behavior.
+                    </p>
+
+                </article>
+
+
+
+                <article class="learning-card">
+
+                    <div class="learning-icon">
+                        📧
+                    </div>
+
+                    <span class="learning-tag">
+                        EMAIL
+                    </span>
+
+                    <h2>
+                        Protect your inbox
+                    </h2>
+
+                    <p>
+                        Learn how to recognize suspicious
+                        attachments, links and unexpected
+                        requests.
+                    </p>
+
+                </article>
+
+
+
+                <article class="learning-card">
+
+                    <div class="learning-icon">
+                        ⚠️
+                    </div>
+
+                    <span class="learning-tag">
+                        THREATS
+                    </span>
+
+                    <h2>
+                        Know common cyber threats
+                    </h2>
+
+                    <p>
+                        Understand malware, ransomware,
+                        social engineering and other
+                        common attack techniques.
+                    </p>
+
+                </article>
+
+
+
+                <article class="learning-card">
+
+                    <div class="learning-icon">
+                        🛡️
+                    </div>
+
+                    <span class="learning-tag">
+                        PROTECTION
+                    </span>
+
+                    <h2>
+                        Protect your accounts
+                    </h2>
+
+                    <p>
+                        Learn practical security habits
+                        such as multi-factor authentication,
+                        updates and secure recovery options.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+<!-- =====================================================
+     P36 — CYBER SECURITY QUIZ
+     ===================================================== -->
+
+<section class="security-quiz">
+
+    <div class="quiz-heading">
+
+        <p class="eyebrow">
+            CYBERGUARD / SECURITY QUIZ
+        </p>
+
+        <h2>
+            Test your
+            <span>security knowledge.</span>
+        </h2>
+
+        <p>
+            Answer five cybersecurity questions
+            and see how well you understand
+            common digital threats.
+        </p>
+
+    </div>
+
+
+    <div class="quiz-card">
+
+        <div class="quiz-progress">
+
+            <span id="quizQuestionNumber">
+                Question 1 of 5
+            </span>
+
+            <span id="quizScore">
+                Score: 0
+            </span>
+
+        </div>
+
+
+        <div class="quiz-progress-bar">
+
+            <div
+                id="quizProgress"
+                style="width: 20%;"
+            ></div>
+
+        </div>
+
+
+        <h3 id="quizQuestion">
+            Loading question...
+        </h3>
+
+
+        <div
+            id="quizOptions"
+            class="quiz-options"
+        ></div>
+
+
+        <div
+            id="quizFeedback"
+            class="quiz-feedback"
+        ></div>
+
+
+        <button
+            id="quizNextButton"
+            class="quiz-next-button"
+            type="button"
+            style="display:none;"
+        >
+            Next Question
+        </button>
+
+    </div>
+
+
+    <div
+        id="quizResult"
+        class="quiz-result"
+        style="display:none;"
+    >
+
+        <span class="quiz-result-label">
+            QUIZ COMPLETE
+        </span>
+
+        <h3>
+            Your security score
+        </h3>
+
+        <strong id="quizFinalScore">
+            0/5
+        </strong>
+
+        <p id="quizResultMessage">
+            Keep learning and improving your
+            cybersecurity knowledge.
+        </p>
+
+        <button
+            id="quizRestartButton"
+            class="quiz-next-button"
+            type="button"
+        >
+            Try Again
+        </button>
+
+    </div>
+
+</section>
+
+
+<script>
+
+/* =====================================================
+   P36 — SECURITY QUIZ LOGIC
+   ===================================================== */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const questions = [
+
+            {
+                question:
+                    "Which is a common sign of a phishing website?",
+
+                options: [
+                    "A suspicious or misspelled domain",
+                    "A strong password",
+                    "A software update",
+                    "A trusted bookmark"
+                ],
+
+                answer: 0
+            },
+
+
+            {
+                question:
+                    "What is the safest way to handle an unexpected email attachment?",
+
+                options: [
+                    "Open it immediately",
+                    "Forward it to everyone",
+                    "Verify the sender before opening it",
+                    "Download it on every device"
+                ],
+
+                answer: 2
+            },
+
+
+            {
+                question:
+                    "Which password is generally stronger?",
+
+                options: [
+                    "12345678",
+                    "password123",
+                    "Your birthday",
+                    "A long unique passphrase"
+                ],
+
+                answer: 3
+            },
+
+
+            {
+                question:
+                    "What does multi-factor authentication provide?",
+
+                options: [
+                    "An additional layer of account protection",
+                    "A faster internet connection",
+                    "Free antivirus software",
+                    "Automatic password sharing"
+                ],
+
+                answer: 0
+            },
+
+
+            {
+                question:
+                    "What should you do with a suspicious link?",
+
+                options: [
+                    "Click it to check",
+                    "Send it to friends",
+                    "Avoid it and verify the destination",
+                    "Enter your password first"
+                ],
+
+                answer: 2
+            }
+
+        ];
+
+
+        let currentQuestion = 0;
+
+        let score = 0;
+
+        let answered = false;
+
+
+        const questionElement =
+            document.querySelector(
+                "#quizQuestion"
+            );
+
+        const optionsElement =
+            document.querySelector(
+                "#quizOptions"
+            );
+
+        const feedbackElement =
+            document.querySelector(
+                "#quizFeedback"
+            );
+
+        const nextButton =
+            document.querySelector(
+                "#quizNextButton"
+            );
+
+        const questionNumber =
+            document.querySelector(
+                "#quizQuestionNumber"
+            );
+
+        const scoreElement =
+            document.querySelector(
+                "#quizScore"
+            );
+
+        const progressElement =
+            document.querySelector(
+                "#quizProgress"
+            );
+
+        const quizCard =
+            document.querySelector(
+                ".quiz-card"
+            );
+
+        const resultElement =
+            document.querySelector(
+                "#quizResult"
+            );
+
+        const finalScore =
+            document.querySelector(
+                "#quizFinalScore"
+            );
+
+        const resultMessage =
+            document.querySelector(
+                "#quizResultMessage"
+            );
+
+        const restartButton =
+            document.querySelector(
+                "#quizRestartButton"
+            );
+
+
+        function loadQuestion() {
+
+            answered = false;
+
+            feedbackElement.textContent = "";
+
+            feedbackElement.className =
+                "quiz-feedback";
+
+
+            nextButton.style.display =
+                "none";
+
+
+            const question =
+                questions[
+                    currentQuestion
+                ];
+
+
+            questionNumber.textContent =
+                "Question " +
+                (currentQuestion + 1) +
+                " of " +
+                questions.length;
+
+
+            scoreElement.textContent =
+                "Score: " +
+                score;
+
+
+            progressElement.style.width =
+                (
+                    (
+                        currentQuestion + 1
+                    ) /
+                    questions.length *
+                    100
+                ) +
+                "%";
+
+
+            questionElement.textContent =
+                question.question;
+
+
+            optionsElement.innerHTML =
+                question.options
+                    .map(
+                        (option, index) => `
+
+                            <button
+                                type="button"
+                                class="quiz-option"
+                                data-index="${index}"
+                            >
+                                <span>
+                                    ${String.fromCharCode(
+                                        65 + index
+                                    )}
+                                </span>
+
+                                ${option}
+
+                            </button>
+
+                        `
+                    )
+                    .join("");
+
+
+            optionsElement
+                .querySelectorAll(
+                    ".quiz-option"
+                )
+                .forEach(
+                    button => {
+
+                        button.addEventListener(
+                            "click",
+                            function () {
+
+                                selectAnswer(
+                                    Number(
+                                        this.dataset.index
+                                    )
+                                );
+
+                            }
+                        );
+
+                    }
+                );
+
+        }
+
+
+        function selectAnswer(index) {
+
+            if (answered) {
+                return;
+            }
+
+
+            answered = true;
+
+
+            const question =
+                questions[
+                    currentQuestion
+                ];
+
+
+            const buttons =
+                optionsElement
+                    .querySelectorAll(
+                        ".quiz-option"
+                    );
+
+
+            buttons.forEach(
+                button => {
+
+                    button.disabled =
+                        true;
+
+                }
+            );
+
+
+            if (
+                index ===
+                question.answer
+            ) {
+
+                score++;
+
+
+                buttons[index]
+                    .classList.add(
+                        "correct"
+                    );
+
+
+                feedbackElement.textContent =
+                    "Correct! Good security awareness.";
+
+                feedbackElement.classList.add(
+                    "correct"
+                );
+
+            }
+
+            else {
+
+                buttons[index]
+                    .classList.add(
+                        "wrong"
+                    );
+
+
+                buttons[
+                    question.answer
+                ]
+                    .classList.add(
+                        "correct"
+                    );
+
+
+                feedbackElement.textContent =
+                    "Not quite. The highlighted answer is correct.";
+
+                feedbackElement.classList.add(
+                    "wrong"
+                );
+
+            }
+
+
+            scoreElement.textContent =
+                "Score: " +
+                score;
+
+
+            nextButton.style.display =
+                "block";
+
+        }
+
+
+        function nextQuestion() {
+
+            currentQuestion++;
+
+
+            if (
+                currentQuestion >=
+                questions.length
+            ) {
+
+                showResult();
+
+                return;
+
+            }
+
+
+            loadQuestion();
+
+        }
+
+
+        function showResult() {
+
+            quizCard.style.display =
+                "none";
+
+
+            resultElement.style.display =
+                "block";
+
+
+            finalScore.textContent =
+                score +
+                "/" +
+                questions.length;
+
+
+            const percentage =
+                (
+                    score /
+                    questions.length
+                ) *
+                100;
+
+
+            if (percentage >= 80) {
+
+                resultMessage.textContent =
+                    "Excellent! Your cybersecurity awareness is strong.";
+
+            }
+
+            else if (percentage >= 60) {
+
+                resultMessage.textContent =
+                    "Good job! A little more practice will strengthen your security knowledge.";
+
+            }
+
+            else {
+
+                resultMessage.textContent =
+                    "Keep learning! Understanding basic security habits can greatly improve your protection.";
+
+            }
+
+        }
+
+
+        function restartQuiz() {
+
+            currentQuestion = 0;
+
+            score = 0;
+
+            quizCard.style.display =
+                "block";
+
+            resultElement.style.display =
+                "none";
+
+            loadQuestion();
+
+        }
+
+
+        nextButton.addEventListener(
+            "click",
+            nextQuestion
+        );
+
+
+        restartButton.addEventListener(
+            "click",
+            restartQuiz
+        );
+
+
+        loadQuestion();
+
+    }
+);
+
+</script>
+<!-- =====================================================
+     P37.1 — SECURITY CHECKLIST
+     ===================================================== -->
+
+<section class="security-checklist">
+
+    <div class="checklist-heading">
+
+        <p class="eyebrow">
+            CYBERGUARD / SECURITY CHECKLIST
+        </p>
+
+        <h2>
+            Strengthen your
+            <span>digital security.</span>
+        </h2>
+
+        <p>
+            Complete these essential security tasks
+            to improve your protection.
+        </p>
+
+    </div>
+
+
+    <div class="checklist-card">
+
+        <div class="checklist-top">
+
+            <div>
+
+                <strong id="checklistCompleted">
+                    0/6 completed
+                </strong>
+<span id="checklistSecurityLevel">
+    Needs Improvement
+</span>
+                <small>
+                    Security protection progress
+                </small>
+
+            </div>
+
+
+            <button
+                id="resetChecklist"
+                class="checklist-reset"
+                type="button"
+            >
+                Reset
+            </button>
+
+        </div>
+
+
+        <div class="checklist-progress">
+
+            <div
+                id="checklistProgress"
+                style="width: 0%;"
+            ></div>
+
+        </div>
+
+
+        <div
+            id="securityChecklistItems"
+            class="checklist-items"
+        ></div>
+
+    </div>
+
+</section>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const checklistItems = [
+        {
+            id: "password",
+            title: "Use strong and unique passwords",
+            description: "Use long passwords and avoid reusing the same password across accounts."
+        },
+        {
+            id: "mfa",
+            title: "Enable multi-factor authentication",
+            description: "Add an extra layer of protection to important accounts."
+        },
+        {
+            id: "updates",
+            title: "Keep software updated",
+            description: "Install security updates for your operating system, browser and applications."
+        },
+        {
+            id: "phishing",
+            title: "Check links before clicking",
+            description: "Verify suspicious links and messages before providing information."
+        },
+        {
+            id: "backup",
+            title: "Maintain important backups",
+            description: "Keep secure copies of important files in case of data loss or ransomware."
+        },
+        {
+            id: "browsing",
+            title: "Practice safe browsing",
+            description: "Avoid suspicious websites, downloads and unexpected pop-ups."
+        }
+    ];
+
+    const container =
+        document.querySelector("#securityChecklistItems");
+
+    const completedText =
+        document.querySelector("#checklistCompleted");
+
+    const progress =
+        document.querySelector("#checklistProgress");
+
+    const resetButton =
+        document.querySelector("#resetChecklist");
+
+
+    let completed = JSON.parse(
+        localStorage.getItem(
+            "cyberguard_security_checklist"
+        ) || "[]"
+    );
+
+
+    function renderChecklist() {
+
+        container.innerHTML = checklistItems.map(item => {
+
+            const isChecked =
+                completed.includes(item.id);
+
+            return `
+                <label class="checklist-item ${isChecked ? "completed" : ""}">
+
+                    <input
+                        type="checkbox"
+                        class="security-check"
+                        data-id="${item.id}"
+                        ${isChecked ? "checked" : ""}
+                    >
+
+                    <span class="checklist-check">
+                        ✓
+                    </span>
+
+                    <span class="checklist-text">
+
+                        <strong>
+                            ${item.title}
+                        </strong>
+
+                        <small>
+                            ${item.description}
+                        </small>
+
+                    </span>
+
+                </label>
+            `;
+
+        }).join("");
+
+
+        container
+            .querySelectorAll(".security-check")
+            .forEach(checkbox => {
+
+                checkbox.addEventListener("change", function () {
+
+                    const id = this.dataset.id;
+
+                    if (this.checked) {
+
+                        if (!completed.includes(id)) {
+                            completed.push(id);
+                        }
+
+                    } else {
+
+                        completed =
+                            completed.filter(
+                                item => item !== id
+                            );
+
+                    }
+
+                    localStorage.setItem(
+                        "cyberguard_security_checklist",
+                        JSON.stringify(completed)
+                    );
+
+                    renderChecklist();
+
+                });
+
+            });
+
+
+        updateChecklistProgress();
+    }
+
+
+    function updateChecklistProgress() {
+
+        const count =
+            completed.length;
+
+        const total =
+            checklistItems.length;
+
+        const percentage =
+            (count / total) * 100;
+
+
+        if (completedText) {
+
+            completedText.textContent =
+                count + "/" + total + " completed";
+
+        }
+
+
+        if (progress) {
+
+            progress.style.width =
+                percentage + "%";
+
+        }
+
+    }
+
+
+    if (resetButton) {
+
+        resetButton.addEventListener(
+            "click",
+            function () {
+
+                completed = [];
+
+                localStorage.removeItem(
+                    "cyberguard_security_checklist"
+                );
+
+                renderChecklist();
+
+            }
+        );
+
+    }
+
+
+    renderChecklist();
+
+});
+</script>
+        </section>
+
+    </main>
+
+
+
+    <footer>
+
+        <span>
+            CYBERGUARD
+        </span>
+
+        <span>
+            Learning Center
+        </span>
+
+    </footer>
+
+
+</div>
+<!-- P35.2 Learning Interaction -->
+
+<div id="learningModal" class="learning-modal">
+
+    <div class="learning-modal-content">
+
+        <button
+            id="closeLearningModal"
+            class="learning-modal-close"
+            type="button"
+        >
+            ×
+        </button>
+
+        <span id="learningModalTag">
+            SECURITY GUIDE
+        </span>
+
+        <h2 id="learningModalTitle">
+            Security Guide
+        </h2>
+
+        <p id="learningModalText">
+            Learn practical ways to stay protected online.
+        </p>
+
+        <div id="learningModalTips"
+             class="learning-modal-tips">
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const cards =
+            document.querySelectorAll(
+                ".learning-card"
+            );
+
+        const modal =
+            document.querySelector(
+                "#learningModal"
+            );
+
+        const closeButton =
+            document.querySelector(
+                "#closeLearningModal"
+            );
+
+        const title =
+            document.querySelector(
+                "#learningModalTitle"
+            );
+
+        const tag =
+            document.querySelector(
+                "#learningModalTag"
+            );
+
+        const text =
+            document.querySelector(
+                "#learningModalText"
+            );
+
+        const tips =
+            document.querySelector(
+                "#learningModalTips"
+            );
+
+
+        const guides = {
+
+            "Spot phishing attacks": {
+
+                tag: "PHISHING",
+
+                text:
+                    "Phishing attacks use fake emails, websites and messages to trick people into revealing passwords, financial information or other sensitive data.",
+
+                tips: [
+                    "Check the sender and website address carefully.",
+                    "Do not click suspicious links.",
+                    "Never share passwords or OTPs through unexpected messages.",
+                    "When unsure, open the official website yourself."
+                ]
+
+            },
+
+
+            "Build stronger passwords": {
+
+                tag: "PASSWORD SECURITY",
+
+                text:
+                    "Strong and unique passwords make it much harder for attackers to access your accounts.",
+
+                tips: [
+                    "Use long passwords or passphrases.",
+                    "Use a different password for every important account.",
+                    "Avoid names, birthdays and easily guessed information.",
+                    "Use a password manager when possible."
+                ]
+
+            },
+
+
+            "Browse safely": {
+
+                tag: "SAFE BROWSING",
+
+                text:
+                    "Safe browsing habits help protect you from malicious websites, downloads and deceptive links.",
+
+                tips: [
+                    "Check the website address before entering information.",
+                    "Avoid suspicious downloads.",
+                    "Keep your browser updated.",
+                    "Be careful with unexpected pop-ups and redirects."
+                ]
+
+            },
+
+
+            "Protect your inbox": {
+
+                tag: "EMAIL SECURITY",
+
+                text:
+                    "Attackers often use email to deliver phishing links, malicious attachments and fake requests.",
+
+                tips: [
+                    "Do not open unexpected attachments.",
+                    "Verify unusual requests before responding.",
+                    "Check links before clicking them.",
+                    "Report suspicious messages when possible."
+                ]
+
+            },
+
+
+            "Know common cyber threats": {
+
+                tag: "THREAT AWARENESS",
+
+                text:
+                    "Understanding common cyber threats helps you recognize suspicious activity before it becomes a security problem.",
+
+                tips: [
+                    "Learn how phishing attacks work.",
+                    "Understand malware and ransomware risks.",
+                    "Watch for social engineering attempts.",
+                    "Keep security software and devices updated."
+                ]
+
+            },
+
+
+            "Protect your accounts": {
+
+                tag: "ACCOUNT PROTECTION",
+
+                text:
+                    "Account security combines strong authentication, secure recovery options and good security habits.",
+
+                tips: [
+                    "Enable multi-factor authentication.",
+                    "Use strong and unique passwords.",
+                    "Review account recovery information.",
+                    "Monitor accounts for unusual activity."
+                ]
+
+            }
+
+        };
+
+
+        cards.forEach(
+            card => {
+
+                card.style.cursor =
+                    "pointer";
+
+
+                card.addEventListener(
+                    "click",
+                    function () {
+
+                        const heading =
+                            card.querySelector(
+                                "h2"
+                            );
+
+                        if (!heading) {
+                            return;
+                        }
+
+
+                        const guide =
+                            guides[
+                                heading.textContent.trim()
+                            ];
+
+
+                        if (!guide) {
+                            return;
+                        }
+
+
+                        title.textContent =
+                            heading.textContent.trim();
+
+
+                        tag.textContent =
+                            guide.tag;
+
+
+                        text.textContent =
+                            guide.text;
+
+
+                        tips.innerHTML =
+                            guide.tips
+                                .map(
+                                    tip => `
+                                        <div class="learning-tip">
+                                            <span>✓</span>
+                                            <p>${tip}</p>
+                                        </div>
+                                    `
+                                )
+                                .join("");
+
+
+                        modal.classList.add(
+                            "open"
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+
+        function closeModal() {
+
+            modal.classList.remove(
+                "open"
+            );
+
+        }
+
+
+        closeButton.addEventListener(
+            "click",
+            closeModal
+        );
+
+
+        modal.addEventListener(
+            "click",
+            function (event) {
+
+                if (
+                    event.target === modal
+                ) {
+
+                    closeModal();
+
+                }
+
+            }
+        );
+
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (
+                    event.key === "Escape"
+                ) {
+
+                    closeModal();
+
+                }
+
+            }
+        );
+
+    }
+);
+
+</script>
+</body>
+
+</html>

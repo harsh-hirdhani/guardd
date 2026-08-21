@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CyberGuard | Digital Security Center</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="app">
+
+        <!-- Navigation -->
+        <header class="navbar">
+
+            <div class="logo">
+                <span class="logo-icon">◈</span>
+                <span>Cyber<span>Guard</span></span>
+            </div>
+<div class="system-status">
+
+    <span class="system-status-dot"></span>
+
+    <span class="system-status-text">
+        SYSTEM ONLINE
+    </span>
+
+    <span
+        id="systemClock"
+        class="system-clock"
+    >
+        --:--:--
+    </span>
+
+</div>
+        <nav>
+    <nav>
+
+    <a href="index.html" class="active">
+        Dashboard
+    </a>
+
+    <a href="pages/password.html">
+        Security Tools
+    </a>
+
+    <a href="pages/threats.html">
+        Threat Center
+    </a>
+
+    <a href="pages/reports.html">
+        Reports
+    </a>
+
+    <a href="pages/learning.html">
+        Learning
+    </a>
+
+</nav>
+    
+</nav>
+            <button class="system-status">
+                <span class="status-dot"></span>
+                System Secure
+            </button>
+
+        </header>
+
+
+        <!-- Main Content -->
+        <main>
+
+            <!-- Hero -->
+            <section class="hero">
+
+                <div class="hero-content">
+
+                    <p class="eyebrow">DIGITAL SECURITY CENTER</p>
+
+                    <h1>
+                        Protect your
+                        <span>digital world.</span>
+                    </h1>
+
+                    <p class="hero-text">
+                        Monitor your digital security, identify potential
+                        threats, and strengthen your online protection.
+                    </p>
+
+                    <button class="scan-button">
+                        Run Security Scan
+                    </button>
+
+                </div>
+
+                <div class="security-orb">
+                    <div class="orb-ring ring-one"></div>
+                    <div class="orb-ring ring-two"></div>
+                    <div class="orb-core">
+                        <span>✓</span>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- Security Overview -->
+            <section class="overview">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">SECURITY OVERVIEW</p>
+                        <h2>Your protection status</h2>
+                    </div>
+
+                    <span class="last-scan">
+                        Last scan: Not performed
+                    </span>
+                </div>
+
+
+                <div class="dashboard-grid">
+
+                    <!-- Security Score -->
+                    <article class="card score-card">
+
+                        <div class="card-header">
+                            <span>Security Score</span>
+                            <span class="card-icon">◉</span>
+                        </div>
+
+                        <div class="score">
+    <strong id="securityScore">100</strong>
+    <span>/100</span>
+</div>
+
+                        <div class="progress-track">
+                            <div class="progress-bar"></div>
+                        </div>
+
+                        <p id="securityScoreMessage">
+    Your CyberGuard security score will update
+    automatically as threats are detected.
+</p>
+
+                    </article>
+
+
+                    <!-- Threat Status -->
+                    <article class="card threat-card">
+
+                        <div class="card-header">
+                            <span>Threat Status</span>
+                            <span class="card-icon">⌁</span>
+                        </div>
+
+                        <div class="threat-status">
+                            <span class="threat-indicator"></span>
+                            <strong
+    id="dashboardThreatStatus"
+    class="status-secure">
+    Secure
+</strong>
+                        </div>
+
+                        <p>
+                            CyberGuard has not detected or analyzed
+                            any threats yet.
+                        </p>
+
+                        <div class="threat-meta">
+                            <span>Threats detected</span>
+                            <strong id="dashboardThreatCount">
+    0
+</strong>
+                        </div>
+
+                    </article>
+
+
+                    <!-- Protection -->
+                    <article class="card protection-card">
+
+                        <div class="card-header">
+                            <span>Protection</span>
+                            <span class="card-icon">♢</span>
+                        </div>
+
+                        <div class="protection-value">
+                            <strong id="dashboardProtection">
+    Monitoring
+</strong>
+<!-- Threat Summary -->
+<article class="card threat-summary-card">
+
+    <div class="card-header">
+        <span>Threat Summary</span>
+        <span class="card-icon">⚠</span>
+    </div>
+
+    <div class="threat-summary-list">
+
+        <div class="summary-item">
+            <span>High Risk</span>
+            <strong id="dashboardHighThreats">0</strong>
+        </div>
+
+        <div class="summary-item">
+            <span>Medium Risk</span>
+            <strong id="dashboardMediumThreats">0</strong>
+        </div>
+
+        <div class="summary-item">
+            <span>Low Risk</span>
+            <strong id="dashboardLowThreats">0</strong>
+        </div>
+
+        <div class="summary-item">
+            <span>Resolved</span>
+            <strong id="dashboardResolvedThreats">0</strong>
+        </div>
+
+    </div>
+
+</article>
+                        </div>
+
+                        <p>
+                           CyberGuard is actively monitoring
+your detected security events.
+                        </p>
+
+                        <div class="protection-line"></div>
+
+                    </article>
+
+                </div>
+
+            </section>
+<!-- Scan History -->
+
+<section class="scan-history-section">
+
+    <div class="section-heading">
+
+        <div>
+
+            <p class="eyebrow">
+                SCAN HISTORY
+            </p>
+
+            <h2>
+                Recent security scans
+            </h2>
+
+        </div>
+<button
+    id="clearScanHistory"
+    type="button"
+    class="clear-history-button"
+>
+    Clear History
+</button>
+    </div>
+
+
+    <div
+        id="scanHistory"
+        class="scan-history"
+    >
+
+        <div class="scan-history-empty">
+
+            No security scans recorded yet.
+
+        </div>
+
+    </div>
+
+</section>
+
+            <!-- Security Tools -->
+            <section class="tools-section">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">SECURITY TOOLS</p>
+                        <h2>Defend your digital identity</h2>
+                    </div>
+                </div>
+
+
+                <div class="tools-grid">
+
+                    <article class="tool-card">
+                        <div class="tool-icon">⌁</div>
+                        <h3>Password Analyzer</h3>
+                        <p>
+                            Analyze password strength and identify
+                            common weaknesses.
+                        </p>
+                        <button onclick="window.location.href='pages/password.html'">
+    Open Tool →
+</button>
+                    </article>
+
+
+                    <article class="tool-card">
+                        <div class="tool-icon">⌘</div>
+                        <h3>Phishing Detector</h3>
+                        <p>
+                            Learn how suspicious links and messages
+                            can be identified.
+                        </p>
+                        <button onclick="window.location.href='pages/phishing.html'">
+    Open Tool →
+</button>
+                    </article>
+
+
+                    <article class="tool-card">
+                        <div class="tool-icon">◇</div>
+                        <h3>Threat Scanner</h3>
+                        <p>
+                            Analyze security indicators and calculate
+                            potential risk.
+                        </p>
+                        <button onclick="window.location.href='pages/threats.html'">
+    Open Tool →
+</button>
+                    </article>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- Footer -->
+        <footer>
+            <span>CYBERGUARD</span>
+            <span>Digital Security Platform</span>
+        </footer>
+
+    </div>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>

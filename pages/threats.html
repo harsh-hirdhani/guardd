@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CyberGuard | Threat Center</title>
+
+    <link
+        rel="stylesheet"
+        href="../style.css"
+    >
+
+</head>
+
+
+<body>
+
+<div id="app">
+
+
+    <!-- ==================================================
+         NAVIGATION
+         ================================================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <span class="logo-icon">◈</span>
+
+            <span>
+                Cyber<span>Guard</span>
+            </span>
+
+        </div>
+
+
+      <nav>
+    <a href="../index.html">Dashboard</a>
+    <a href="password.html">Security Tools</a>
+    <a href="threats.html" class="active">Threat Center</a>
+    <a href="learning.html">
+    Learning
+</a>
+</nav>
+
+
+        <div class="system-status">
+
+            <span class="status-dot"></span>
+
+            System Secure
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ==================================================
+         THREAT CENTER
+         ================================================== -->
+
+    <main>
+
+        <section class="threat-center">
+
+
+            <!-- ==========================================
+                 PAGE HEADER
+                 ========================================== -->
+
+            <div class="threat-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        SECURITY OPERATIONS / THREAT CENTER
+                    </p>
+
+
+                    <h1>
+                        Threat
+                        <span>Intelligence.</span>
+                    </h1>
+
+
+                    <p>
+
+                        Monitor security events, analyze
+                        risk levels, and review detected
+                        threats from CyberGuard tools.
+
+                    </p>
+
+                </div>
+
+
+                <div class="threat-status-card">
+
+                    <span class="status-dot"></span>
+
+                    <div>
+
+                        <strong>
+                            SYSTEM STATUS
+                        </strong>
+
+                        <small>
+                            Monitoring Active
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 THREAT STATISTICS
+                 ========================================== -->
+
+            <div class="threat-stats">
+
+
+                <div class="threat-stat-card">
+
+                    <span>
+                        TOTAL EVENTS
+                    </span>
+
+                    <strong id="totalThreats">
+                        0
+                    </strong>
+
+                    <small>
+                        Recorded events
+                    </small>
+
+                </div>
+
+
+
+                <div class="threat-stat-card">
+
+                    <span>
+                        HIGH RISK
+                    </span>
+
+                    <strong id="highThreats">
+                        0
+                    </strong>
+
+                    <small>
+                        Requires attention
+                    </small>
+
+                </div>
+
+
+
+                <div class="threat-stat-card">
+
+                    <span>
+                        MEDIUM RISK
+                    </span>
+
+                    <strong id="mediumThreats">
+                        0
+                    </strong>
+
+                    <small>
+                        Monitor activity
+                    </small>
+
+                </div>
+
+
+
+                <div class="threat-stat-card">
+
+                    <span>
+                        RESOLVED
+                    </span>
+
+                    <strong id="resolvedThreats">
+                        0
+                    </strong>
+
+                    <small>
+                        Secured events
+                    </small>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 CONTROL BAR
+                 ========================================== -->
+
+            <div class="threat-controls">
+
+
+                <div class="threat-search">
+
+                    <span>⌕</span>
+
+                    <input
+                        type="text"
+                        id="threatSearch"
+                        placeholder="Search threats..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+
+                <div class="threat-filter">
+
+                    <select id="threatFilter">
+
+                        <option value="all">
+                            All Threats
+                        </option>
+
+                        <option value="critical">
+                            Critical
+                        </option>
+
+                        <option value="high">
+                            High Risk
+                        </option>
+
+                        <option value="medium">
+                            Medium Risk
+                        </option>
+
+                        <option value="low">
+                            Low Risk
+                        </option>
+
+                    </select>
+
+                </div>
+
+ 
+
+
+
+            <!-- ==========================================
+                 THREAT TABLE
+                 ========================================== -->
+
+            <div class="threat-table-panel">
+
+
+                <div class="table-header">
+
+                    <div>
+                        Threat Event
+                    </div>
+
+                    <div>
+                        Category
+                    </div>
+
+                    <div>
+                        Risk
+                    </div>
+
+                    <div>
+                        Time
+                    </div>
+
+                    <div>
+                        Status
+                    </div>
+
+                </div>
+
+
+
+                <div
+                    id="threatList"
+                    class="threat-list"
+                >
+
+                    <!-- Threats will be inserted
+                         here by JavaScript -->
+
+                    <div class="empty-threat-state">
+
+                        <div class="empty-icon">
+                            ◇
+                        </div>
+
+                        <strong>
+                            No threats detected
+                        </strong>
+
+                        <p>
+                            CyberGuard has not detected
+                            any security events yet.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+<!-- ==========================================
+     INCIDENT DETAILS
+     ========================================== -->
+
+<div
+    id="incidentPanel"
+    class="incident-panel"
+    style="display: block;"
+>
+
+    <div class="incident-header">
+
+        <div>
+
+            <span class="panel-label">
+                INCIDENT DETAILS
+            </span>
+
+            <h2 id="incidentTitle">
+                Threat Event
+            </h2>
+
+        </div>
+
+        <button
+            id="closeIncident"
+            class="incident-close"
+            type="button"
+        >
+            ×
+        </button>
+
+    </div>
+
+
+    <div class="incident-grid">
+
+
+        <div class="incident-field">
+
+            <span>
+                CATEGORY
+            </span>
+
+            <strong id="incidentCategory">
+                --
+            </strong>
+
+        </div>
+
+
+        <div class="incident-field">
+
+            <span>
+                RISK LEVEL
+            </span>
+
+            <strong id="incidentRisk">
+                --
+            </strong>
+
+        </div>
+
+
+        <div class="incident-field">
+
+            <span>
+                STATUS
+            </span>
+
+            <strong id="incidentStatus">
+                --
+            </strong>
+
+        </div>
+
+
+        <div class="incident-field">
+
+            <span>
+                DETECTED
+            </span>
+
+            <strong id="incidentTime">
+                --
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <div class="incident-description">
+
+        <span>
+            ANALYSIS
+        </span>
+
+        <p id="incidentDetails">
+            --
+        </p>
+
+    </div>
+
+
+    <div class="incident-actions">
+
+        <button
+            id="investigateThreat"
+            type="button"
+            class="investigate-button"
+        >
+            Investigate
+        </button>
+
+
+        <button
+            id="resolveThreat"
+            type="button"
+            class="resolve-button"
+        >
+            Resolve Threat
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ==========================================
+     SECURITY EVENT TIMELINE
+     ========================================== -->
+
+<div class="security-timeline">
+
+    <div class="timeline-heading">
+
+        <div>
+
+            <span class="panel-label">
+                SECURITY ACTIVITY
+            </span>
+
+            <h2>
+                Event Timeline
+            </h2>
+
+        </div>
+
+        <span class="live-indicator">
+            LIVE
+        </span>
+
+    </div>
+
+
+    <div id="securityTimeline">
+
+        <div class="timeline-empty">
+
+            <span class="timeline-empty-icon">
+                ◇
+            </span>
+
+            <strong>
+                No security activity
+            </strong>
+
+            <p>
+                CyberGuard activity will appear here
+                as security events are detected.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+            <!-- ==========================================
+                 INFORMATION PANEL
+                 ========================================== -->
+
+            <div class="threat-info">
+
+                <div class="info-icon">
+                    i
+                </div>
+
+                <div>
+
+                    <strong>
+                        About Threat Intelligence
+                    </strong>
+
+                    <p>
+
+                        Threat events displayed here are
+                        generated by CyberGuard security
+                        tools. Future versions can connect
+                        to external threat-intelligence
+                        feeds for real-time monitoring.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+
+    <footer>
+
+        <span>
+            CYBERGUARD
+        </span>
+
+        <span>
+            Threat Intelligence Center
+        </span>
+
+    </footer>
+
+
+</div>
+
+
+<script src="../app.js"></script>
+
+</body>
+
+</html>
