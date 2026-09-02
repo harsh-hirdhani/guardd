@@ -10394,3 +10394,107 @@ textarea:focus-visible {
 .status-resolved {
     color: #22c55e;
 }
+/* ==========================================
+   CYBERGUARD ACCOUNT UI
+   ========================================== */
+
+.cyberguard-account {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
+    padding-left: 18px;
+    border-left: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.cyberguard-user {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    min-width: 0;
+}
+
+.cyberguard-user-icon {
+    font-size: 10px;
+    color: #22c7f0;
+}
+
+.cyberguard-user-email {
+    max-width: 190px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 13px;
+    color: #c9d3dc;
+}
+
+.cyberguard-logout {
+    padding: 7px 12px;
+    border: 1px solid #33404b;
+    border-radius: 5px;
+    background: transparent;
+    color: #c9d3dc;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.cyberguard-logout:hover {
+    border-color: #22c7f0;
+    color: #22c7f0;
+}
+
+.cyberguard-logout:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+    .cyberguard-account {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+        padding-left: 0;
+        padding-top: 10px;
+        border-left: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.10);
+        justify-content: space-between;
+    }
+
+    .cyberguard-user-email {
+        max-width: 220px;
+    }
+}
+/* ==========================================
+   FIX NAVBAR LAYOUT
+   ========================================== */
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar > nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    flex: 1;
+}
+
+.navbar > .logo {
+    flex-shrink: 0;
+}
+
+.navbar > .system-status {
+    flex-shrink: 0;
+}
+
+.navbar > #cyberguardAccount {
+    flex-shrink: 0;
+}
