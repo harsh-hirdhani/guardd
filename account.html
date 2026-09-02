@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Account | CyberGuard</title>
+
+    <style>
+        /* ==========================================
+   CYBERGUARD ACCOUNT UI POLISH
+   ========================================== */
+
+body {
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(34, 199, 240, 0.06),
+            transparent 35%
+        ),
+        #071018;
+}
+
+.account-page {
+    position: relative;
+}
+
+.account-header {
+    border-bottom: 1px solid rgba(34, 199, 240, 0.12);
+    padding-bottom: 20px;
+}
+
+.account-header h1 {
+    letter-spacing: 0.5px;
+}
+
+.account-card {
+    position: relative;
+    overflow: hidden;
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.18);
+    transition: border-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.account-card:hover {
+    border-color: rgba(34, 199, 240, 0.28);
+}
+
+.account-card h2 {
+    color: #22c7f0;
+    font-size: 16px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+.account-row {
+    min-height: 52px;
+}
+
+.account-value {
+    text-align: right;
+}
+
+.security-status {
+    position: relative;
+}
+
+.security-status::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-right: 7px;
+    border-radius: 50%;
+    background: #22c7f0;
+    box-shadow: 0 0 8px rgba(34, 199, 240, 0.7);
+}
+
+#passwordMessage {
+    margin-top: 12px;
+    font-size: 13px;
+}
+
+#changePasswordForm input:focus {
+    border-color: #22c7f0 !important;
+    box-shadow: 0 0 0 2px rgba(34, 199, 240, 0.08);
+}
+
+#changePasswordButton {
+    border-color: #22c7f0;
+    color: #22c7f0;
+}
+
+#changePasswordButton:hover {
+    background: rgba(34, 199, 240, 0.08);
+}
+
+.account-actions {
+    margin-top: 5px;
+}
+
+@media (max-width: 600px) {
+
+    .account-page {
+        padding: 30px 16px;
+    }
+
+    .account-header h1 {
+        font-size: 25px;
+    }
+
+    .account-card {
+        padding: 20px;
+    }
+
+    .account-value {
+        text-align: left;
+    }
+}
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: #071018;
+            color: #e8f0f5;
+            font-family: Arial, sans-serif;
+        }
+
+        .account-page {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 50px 25px;
+        }
+
+        .account-header {
+            margin-bottom: 30px;
+        }
+
+        .account-header h1 {
+            margin: 0 0 8px;
+            color: #22c7f0;
+            font-size: 30px;
+        }
+
+        .account-header p {
+            margin: 0;
+            color: #8f9da8;
+            font-size: 14px;
+        }
+
+        .account-card {
+            background: #0d1821;
+            border: 1px solid #243440;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        .account-card h2 {
+            margin: 0 0 20px;
+            font-size: 18px;
+            color: #e8f0f5;
+        }
+
+        .account-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+        }
+
+        .account-row:last-child {
+            border-bottom: none;
+        }
+
+        .account-label {
+            color: #8999a5;
+            font-size: 13px;
+        }
+
+        .account-value {
+            color: #dce6ec;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .security-status {
+            color: #22c7f0;
+        }
+
+        .account-button {
+            display: inline-block;
+            padding: 11px 18px;
+            border: 1px solid #33404b;
+            border-radius: 6px;
+            background: transparent;
+            color: #c9d3dc;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        .account-button:hover {
+            border-color: #22c7f0;
+            color: #22c7f0;
+        }
+
+        .danger-button:hover {
+            border-color: #ff6464;
+            color: #ff6464;
+        }
+
+        .account-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        #accountMessage {
+            margin-top: 15px;
+            font-size: 13px;
+            color: #22c7f0;
+        }
+
+        @media (max-width: 600px) {
+            .account-row {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 7px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="account-page">
+
+    <div class="account-header">
+        <h1>My Account</h1>
+        <p>Manage your CyberGuard account and security settings.</p>
+    </div>
+
+<div class="account-card">
+
+    <h2>Account Information</h2>
+
+    <div class="account-row">
+        <span class="account-label">Email Address</span>
+        <span class="account-value" id="userEmail">
+            Loading...
+        </span>
+    </div>
+
+    <div class="account-row">
+        <span class="account-label">Email Verification</span>
+        <span class="account-value security-status" id="emailStatus">
+            Checking...
+        </span>
+    </div>
+
+    <div class="account-row">
+        <span class="account-label">Account Created</span>
+        <span class="account-value" id="accountCreated">
+            Loading...
+        </span>
+    </div>
+
+    <div class="account-row">
+        <span class="account-label">Authentication</span>
+        <span class="account-value security-status">
+            Secure Authentication
+        </span>
+    </div>
+
+    <div class="account-row">
+        <span class="account-label">Security Status</span>
+        <span class="account-value security-status">
+            Protected
+        </span>
+    </div>
+
+</div>
+
+    <div class="account-card">
+
+        <h2>Security</h2>
+        <form id="changePasswordForm" style="margin-bottom: 22px;">
+
+    <label
+        for="newPassword"
+        style="display:block; margin-bottom:8px; color:#c9d3dc; font-size:13px;"
+    >
+        New Password
+    </label>
+
+    <input
+        type="password"
+        id="newPassword"
+        minlength="8"
+        placeholder="Enter new password"
+        required
+        style="width:100%; padding:12px; margin-bottom:12px; background:#071018; color:white; border:1px solid #33404b; border-radius:6px;"
+    >
+
+    <label
+        for="confirmNewPassword"
+        style="display:block; margin-bottom:8px; color:#c9d3dc; font-size:13px;"
+    >
+        Confirm New Password
+    </label>
+
+    <input
+        type="password"
+        id="confirmNewPassword"
+        minlength="8"
+        placeholder="Confirm new password"
+        required
+        style="width:100%; padding:12px; margin-bottom:12px; background:#071018; color:white; border:1px solid #33404b; border-radius:6px;"
+    >
+
+    <button
+        type="submit"
+        id="changePasswordButton"
+        class="account-button"
+    >
+        Update Password
+    </button>
+
+    <div id="passwordMessage"></div>
+
+</form>
+
+        <div class="account-actions">
+
+            <a
+                href="forgot-password.html"
+                class="account-button"
+            >
+                Change Password
+            </a>
+
+            <a
+                href="index.html"
+                class="account-button"
+            >
+                Back to Dashboard
+            </a>
+
+            <button
+                type="button"
+                id="accountLogout"
+                class="account-button danger-button"
+            >
+                Logout
+            </button>
+
+        </div>
+
+        <div id="accountMessage"></div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script src="auth.js"></script>
+<script src="auth-guard.js"></script>
+
+<script>
+
+(async function () {
+
+    try {
+
+        const user = await getCurrentUser();
+
+        if (!user) {
+            return;
+        }
+
+        document.getElementById("userEmail").textContent =
+    user.email || "User";
+
+
+// Email verification status
+const emailStatus =
+    document.getElementById("emailStatus");
+
+if (user.email_confirmed_at) {
+
+    emailStatus.textContent = "Verified";
+    emailStatus.style.color = "#22c7f0";
+
+} else {
+
+    emailStatus.textContent = "Not Verified";
+    emailStatus.style.color = "#ffb84d";
+
+}
+
+
+// Account creation date
+const accountCreated =
+    document.getElementById("accountCreated");
+
+if (user.created_at) {
+
+    const createdDate =
+        new Date(user.created_at);
+
+    accountCreated.textContent =
+        createdDate.toLocaleDateString(
+            "en-IN",
+            {
+                day: "2-digit",
+                month: "short",
+                year: "numeric"
+            }
+        );
+
+}
+
+    } catch (error) {
+
+        console.error(
+            "Unable to load account information:",
+            error
+        );
+
+    }
+
+})();
+
+
+document
+    .getElementById("accountLogout")
+    .addEventListener("click", async function () {
+
+        const button =
+            document.getElementById("accountLogout");
+
+        button.disabled = true;
+        button.textContent = "Logging out...";
+
+        try {
+
+            await logoutUser();
+
+        } catch (error) {
+
+            console.error(error);
+
+            button.disabled = false;
+            button.textContent = "Logout";
+
+            document.getElementById("accountMessage").textContent =
+                error.message || "Unable to logout.";
+
+        }
+
+    });
+document
+    .getElementById("changePasswordForm")
+    .addEventListener("submit", async function (event) {
+
+        event.preventDefault();
+
+        const password =
+            document.getElementById("newPassword").value;
+
+        const confirmPassword =
+            document.getElementById("confirmNewPassword").value;
+
+        const button =
+            document.getElementById("changePasswordButton");
+
+        const message =
+            document.getElementById("passwordMessage");
+
+        message.textContent = "";
+
+        if (password.length < 8) {
+            message.style.color = "#ff6b6b";
+            message.textContent =
+                "Password must be at least 8 characters.";
+            return;
+        }
+
+        if (password !== confirmPassword) {
+            message.style.color = "#ff6b6b";
+            message.textContent =
+                "Passwords do not match.";
+            return;
+        }
+
+        button.disabled = true;
+        button.textContent = "Updating...";
+
+        try {
+
+            const { error } =
+                await supabaseClient.auth.updateUser({
+                    password: password
+                });
+
+            if (error) {
+                throw error;
+            }
+
+            message.style.color = "#22c7f0";
+            message.textContent =
+                "Password updated successfully.";
+
+            document
+                .getElementById("changePasswordForm")
+                .reset();
+
+            button.textContent = "Password Updated";
+
+        } catch (error) {
+
+            console.error(
+                "Password update failed:",
+                error
+            );
+
+            message.style.color = "#ff6b6b";
+            message.textContent =
+                error.message ||
+                "Unable to update password.";
+
+            button.disabled = false;
+            button.textContent = "Update Password";
+        }
+
+    });
+</script>
+
+</body>
+</html>
